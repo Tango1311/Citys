@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Выбор лучшего города для проживания</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+
+  <script type="module" src="main.js" defer></script>
+</head>
+<body>
+
+  <h1>Выбор лучшего города для проживания</h1>
+
+  <p class="intro">
+    В современном мире выбор места для жизни — важное решение, влияющее на качество жизни и комфорт. 
+    В нашем исследовании мы рассмотрели десять крупных городов России по семи ключевым критериям: средняя стоимость жизни, уровень здравоохранения, образование, экономический потенциал, инфраструктура, экология и доступность транспорта.
+    Сайт позволяет выбрать для вас важные критерии, после чего города сортируются по их совокупному рейтингу, помогая сделать осознанный выбор.
+  </p>
+
+  <section aria-label="Фильтр критериев" class="filter-container" role="region">
+    <label class="filter-label" title="Средняя стоимость жизни">
+      <input type="checkbox" value="стоимость_жизни" /> Средняя стоимость жизни
+    </label>
+    <label class="filter-label" title="Уровень здравоохранения">
+      <input type="checkbox" value="здравоохранение" /> Уровень здравоохранения
+    </label>
+    <label class="filter-label" title="Образование">
+      <input type="checkbox" value="образование" /> Образование
+    </label>
+    <label class="filter-label" title="Экономический потенциал">
+      <input type="checkbox" value="экономика" /> Экономический потенциал
+    </label>
+    <label class="filter-label" title="Инфраструктура">
+      <input type="checkbox" value="инфраструктура" /> Инфраструктура
+    </label>
+    <label class="filter-label" title="Экология">
+      <input type="checkbox" value="экология" /> Экология
+    </label>
+    <button id="reset-filters" aria-label="Сбросить все фильтры">Сбросить фильтры</button>
+  </section>
+
+  <section id="top-table-container" style="max-width: 900px; margin: 40px auto;"></section>
+
+  <section aria-label="Результаты сортировки городов" class="cities-container" id="cities-container" role="list"></section>
+
+  <section aria-label="Графики сравнений по критериям" class="charts-container" id="charts-container"></section>
+  <section id="conclusion" class="conclusion-container" aria-label="Итоги исследования" style="max-width: 900px; margin: 40px auto; padding: 10px;">
+    <!-- Здесь будет текст вывода -->
+  </section>
+
+
+</body>
+</html>
